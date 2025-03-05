@@ -93,27 +93,32 @@
         .footer {
             background: #000000;
             color: #ffffff;
-            padding: 20px 20px 15px;
+            padding: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-        }
-        .footer-left {
-            display: flex;
+            flex-direction: column;
             align-items: center;
         }
-        .footer-left img {
-            height: 40px;
-            margin-right: 10px;
+        .footer img {
+            height: 50px;
+            margin-bottom: 10px;
         }
-        .footer .footer-links {
+        .footer-content {
             display: flex;
-            gap: 20px;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            align-items: flex-end;
+        }
+        .footer-left {
+            text-align: left;
+        }
+        .footer-links {
+            text-align: right;
         }
         .footer a {
             color: #ffffff;
             text-decoration: none;
+            margin-left: 20px;
             transition: color 0.3s ease;
         }
         .footer a:hover {
@@ -165,14 +170,16 @@
         </section>
     </div>
     <footer class="footer">
-        <div class="footer-left">
-            <img src="AI-logo.png" alt="Andersen Industries Logo">
-            <p>&copy; 2025 Andersen Industries.</p>
-        </div>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact</a>
+        <img src="AI-logo.png" alt="Andersen Industries Logo">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 Andersen Industries.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
     </footer>
 </body>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andersen Industries</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .hero {
+            padding: 120px 20px;
+            background: #000;
+        }
+        .hero img {
+            max-width: 220px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .vision {
+            background: #fff;
+            color: #000;
+            padding: 80px 20px;
+        }
+        h1, h2 {
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+        section {
+            padding: 70px 20px;
+        }
+        .industries {
+            background: #000;
+            padding: 80px 20px;
+        }
+        .industries h2 {
+            color: #fff;
+        }
+        .industries ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .industries li {
+            font-size: 1.5rem;
+            margin: 20px;
+            padding: 25px;
+            background: #111;
+            border-radius: 12px;
+            width: 260px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 2px solid #fff;
+        }
+        .industries li:hover {
+            transform: scale(1.05);
+            background: #222;
+        }
+        .advantage p, .opportunity p {
+            font-size: 1.3rem;
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        .contact {
+            background: #000;
+            padding: 80px 20px;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            margin: 12px 0;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: 2px solid #fff;
+            background: #000;
+            color: #fff;
+        }
+        .contact button {
+            background: #fff;
+            color: #000;
+            padding: 12px;
+            font-size: 1.3rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .contact button:hover {
+            background: #000;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <img src="logo.png" alt="Andersen Industries Logo">
+        <h1>Redefining the Future</h1>
+        <p>Disrupting industries. Engineering the impossible.</p>
+    </header>
+    
+    <section class="vision">
+        <h2>Our Vision</h2>
+        <p>Andersen Industries exists to shatter boundaries and redefine what’s possible. We are pioneers, architects of the future, and relentless executors of world-changing technology.</p>
+    </section>
+    
+    <section class="industries">
+        <h2>Industries We’re Transforming</h2>
+        <ul>
+            <li><strong>AI</strong> - Intelligence reimagined, shaping tomorrow’s world.</li>
+            <li><strong>Aerospace</strong> - Breaking limits in space exploration and high-speed aviation.</li>
+            <li><strong>Education</strong> - Personalized AI-driven learning for a smarter generation.</li>
+            <li><strong>Energy</strong> - Revolutionary renewable, fusion, and nuclear breakthroughs.</li>
+            <li><strong>Health</strong> - Life extension, biotech, and cutting-edge medical advancements.</li>
+            <li><strong>High Impact</strong> - Disruptive innovations reshaping entire industries.</li>
+        </ul>
+    </section>
+    
+    <section class="advantage">
+        <h2>The Andersen Advantage</h2>
+        <p>We don’t compete. We dominate. Andersen Industries operates at the convergence of vision and execution, building a network of disruptive ventures with relentless speed and precision.</p>
+    </section>
+    
+    <section class="opportunity">
+        <h2>The Opportunity</h2>
+        <p>The next industrial revolution isn’t coming—it’s here. Andersen Industries stands at the helm of this transformation, designing the future while others struggle to keep up.</p>
+    </section>
+    
+    <section class="contact">
+        <h2>Let’s Build the Future</h2>
+        <p>Partner with us and invest in the next wave of global innovation.</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>

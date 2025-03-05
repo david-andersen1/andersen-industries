@@ -115,6 +115,37 @@
         .contact button:hover {
             background: #dddddd;
         }
+        .footer {
+            background: #000000;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-top: 1px solid #222;
+        }
+        .footer img {
+            height: 50px;
+            width: auto;
+        }
+        .footer p {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        .footer .legal-links {
+            display: flex;
+            gap: 15px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #bbbbbb;
+        }
     </style>
 </head>
 <body>
@@ -133,37 +164,27 @@
     </section>
     
     <section class="industries">
-    <h2>Industries We’re Transforming</h2>
-    <ul>
-        <li><strong>Artificial Intelligence</strong><br>Building the intelligence layer for the future. Smarter, faster, autonomous.</li>
-        <li><strong>Aerospace</strong><br>Revolutionizing space access and supersonic travel for a limitless world.</li>
-        <li><strong>Education</strong><br>AI-driven personalized learning, redefining human potential.</li>
-        <li><strong>Energy</strong><br>Next-gen nuclear, fusion, and renewables to power civilization forever.</li>
-        <li><strong>Health</strong><br>Extending life, enhancing the body, and curing the incurable.</li>
-        <li><strong>High Impact</strong><br>Disruptive innovations that redefine entire economies.</li>
-    </ul>
-</section>
-
-    
-    <section class="advantage">
-        <h2>The Andersen Advantage</h2>
-        <p>We don’t compete. We dominate. Andersen Industries operates at the convergence of vision and execution, building a network of disruptive ventures with relentless speed and precision.</p>
+        <h2>Industries We’re Transforming</h2>
+        <ul>
+            <li><strong>Artificial Intelligence</strong><br>Building the intelligence layer for the future. Smarter, faster, autonomous.</li>
+            <li><strong>Aerospace</strong><br>Revolutionizing space access and supersonic travel for a limitless world.</li>
+            <li><strong>Education</strong><br>AI-driven personalized learning, redefining human potential.</li>
+            <li><strong>Energy</strong><br>Next-gen nuclear, fusion, and renewables to power civilization forever.</li>
+            <li><strong>Health</strong><br>Extending life, enhancing the body, and curing the incurable.</li>
+            <li><strong>High Impact</strong><br>Disruptive innovations that redefine entire economies.</li>
+        </ul>
     </section>
     
-    <section class="opportunity">
-        <h2>The Opportunity</h2>
-        <p>The next industrial revolution isn’t coming. It’s here. Andersen Industries stands at the helm of this transformation, designing the future while others struggle to keep up.</p>
-    </section>
-    
-    <section class="contact">
-        <h2>Let’s Build the Future</h2>
-        <p>Partner with us and invest in the next wave of global innovation.</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <footer class="footer">
+        <div>
+            <img src="AI-logo.png" alt="Andersen Industries Logo">
+            <p>&copy; 2025 by Andersen Industries, Inc.</p>
+        </div>
+        <div class="legal-links">
+            <a href="/conduct">Conduct</a>
+            <a href="/terms">Terms of Use & Privacy</a>
+            <a href="/disclosures">Disclosures</a>
+        </div>
+    </footer>
 </body>
 </html>

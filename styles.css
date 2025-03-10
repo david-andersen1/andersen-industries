@@ -12,7 +12,7 @@ header.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
     background: #111;
     position: fixed;
     width: 100%;
@@ -22,26 +22,21 @@ header.site-header {
 }
 
 .site-header .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #FFD700;
-    text-decoration: none;
+    padding-left: 40px;
 }
 
-.site-header nav {
-    display: flex;
-    gap: 20px;
+.site-header .logo img {
+    height: 70px; /* Slightly larger logo */
 }
 
-.site-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: 0.3s;
+.cta-button.desktop-only {
+    margin-right: 40px;
 }
 
-.site-header nav a:hover {
-    color: #FFD700;
+@media (max-width: 768px) {
+    .cta-button.desktop-only {
+        display: none;
+    }
 }
 
 /* Hero Section */
@@ -146,22 +141,12 @@ footer {
     text-align: center;
 }
 
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
+footer .logo {
+    padding-left: 40px;
 }
 
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.footer-nav a:hover {
-    color: #FFD700;
+footer .logo img {
+    height: 70px; /* Slightly larger logo */
 }
 
 .footer-text {

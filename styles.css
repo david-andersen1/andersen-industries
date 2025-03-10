@@ -66,8 +66,51 @@ ul li {
     opacity: 0.9;
 }
 
-/* Footer */
+/* Opportunity Section */
+.opportunity-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.opportunity-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+/* How We Operate */
+.process-diagram {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.process-step {
+    background: #111;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Founder Section */
+.founder-bio {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+/* Footer CTA */
 footer {
     padding: 60px 20px;
     background: #111;
+}
+
+.final-cta {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 20px;
 }

@@ -10,13 +10,13 @@ body {
 /* Hero Section */
 .hero {
     padding: 100px 20px;
-    background: linear-gradient(180deg, rgba(255, 215, 0, 0.2), transparent);
+    background: #000; /* Solid black background */
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #FFD700; /* Gold */
+    color: #fff; /* White text */
 }
 
 .hero p {
@@ -52,7 +52,7 @@ section {
 
 h2 {
     font-size: 2.5rem;
-    color: #FFD700;
+    color: #fff; /* White text */
 }
 
 ul {

@@ -26,7 +26,7 @@ header.site-header {
 }
 
 .site-header .logo img {
-    height: 4.375rem; /* Slightly larger logo */
+    height: 4.5rem;
 }
 
 .cta-button.desktop-only {
@@ -41,7 +41,7 @@ header.site-header {
 
 /* Hero Section */
 .hero {
-    padding: 7.5rem 1.25rem 6.25rem;
+    padding: 10rem 1.25rem 6.25rem;
     background: #000;
 }
 
@@ -146,7 +146,7 @@ footer .logo {
 }
 
 footer .logo img {
-    height: 4.375rem; /* Slightly larger logo */
+    height: 4.5rem; /* Slightly larger logo */
 }
 
 .footer-text {

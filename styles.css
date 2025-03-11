@@ -12,8 +12,8 @@ header.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
-    background: #111;
+    padding: .5rem;
+    background: #000;
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,7 +26,7 @@ header.site-header {
 }
 
 .site-header .logo img {
-    height: 4.375rem;
+    height: 4.5rem;
 }
 
 .cta-button.desktop-only {
@@ -41,7 +41,7 @@ header.site-header {
 
 /* Hero Section */
 .hero {
-    padding: 7.5rem 1.25rem 6.25rem;
+    padding: 7.5rem 1.25rem 2.5rem;
     background: #000;
 }
 
@@ -133,7 +133,7 @@ ul li {
 /* Footer */
 footer {
     padding: 3.75rem 1.25rem;
-    background: #111;
+    background: #000;
     text-align: center;
 }
 
@@ -142,10 +142,10 @@ footer .logo {
 }
 
 footer .logo img {
-    height: 4.375rem;
+    height: 4.5rem;
 }
 
 .footer-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.7;
 }

@@ -26,7 +26,7 @@ header.site-header {
 }
 
 .site-header .logo img {
-    height: 4.5rem;
+    height: 4.375rem;
 }
 
 .cta-button.desktop-only {
@@ -41,7 +41,7 @@ header.site-header {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 1.25rem 5rem;
+    padding: 7.5rem 1.25rem 6.25rem;
     background: #000;
 }
 
@@ -98,40 +98,36 @@ ul li {
     opacity: 0.9;
 }
 
-/* Opportunity Section */
-.opportunity-icons {
-    display: flex;
-    justify-content: center;
+/* Industry Grid */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.25rem;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
 }
 
-.opportunity-icons img {
-    width: 3.125rem;
-    height: 3.125rem;
-}
-
-/* How We Operate */
-.process-diagram {
-    display: flex;
-    justify-content: center;
-    gap: 0.9375rem;
-    margin-top: 1.25rem;
-}
-
-.process-step {
+.industry-card {
     background: #111;
-    padding: 0.625rem 0.9375rem;
-    border-radius: 0.3125rem;
-    font-size: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Founder Section */
-.founder-bio {
-    font-size: 1.1rem;
-    max-width: 43.75rem;
-    margin: 0 auto;
-    opacity: 0.85;
+.industry-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.industry-card p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 /* Footer */
@@ -146,7 +142,7 @@ footer .logo {
 }
 
 footer .logo img {
-    height: 4.5rem; /* Slightly larger logo */
+    height: 4.375rem;
 }
 
 .footer-text {

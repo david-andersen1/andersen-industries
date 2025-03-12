@@ -87,6 +87,40 @@ h2 {
     color: #fff;
 }
 
+/* Industry Grid (Why Now Section) */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.industry-card {
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.industry-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
 /* Timeline Layout */
 .timeline {
     display: flex;
@@ -94,6 +128,7 @@ h2 {
     align-items: center;
     position: relative;
     margin-top: 3rem;
+    z-index: 1;
 }
 
 .timeline::before {

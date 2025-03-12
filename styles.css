@@ -121,6 +121,47 @@ h2 {
     opacity: 0.9;
 }
 
+/* Comparison Table */
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-table th {
+    background-color: #111;
+    color: #FFD700;
+}
+
+/* Investor Journey */
+.investor-journey {
+    margin-top: 3rem;
+}
+
+.journey-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.journey-step {
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.journey-step:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 0.5rem rgba(255, 215, 0, 0.5);
+}
+
 /* Timeline Layout */
 .timeline {
     display: flex;
@@ -187,6 +228,7 @@ h2 {
         margin-bottom: 2rem;
     }
 }
+
 /* Footer */
 footer {
     padding: 3.75rem 1.25rem;

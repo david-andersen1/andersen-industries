@@ -38,11 +38,6 @@ header.site-header {
         display: none;
     }
 }
-
-@media (max-width: 48rem) {
-    .site-header .logo img {
-    height: 3rem;
-}
     
 /* Hero Section */
 .hero {

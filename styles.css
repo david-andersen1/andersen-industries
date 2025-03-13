@@ -1,344 +1,400 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
 }
 
-/* Body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
+p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
 }
 
 /* Header */
-.site-header {
+header.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    background-color: #000;
+    padding: .5rem;
+    background: #000;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.site-header .logo {
+    padding-left: 2.5rem;
 }
 
 .site-header .logo img {
-    width: 150px;
+    height: 4.5rem;
 }
 
-.site-header .cta-button {
-    display: none;
+.cta-button.desktop-only {
+    margin-right: 2.5rem;
 }
 
-.site-header .cta-button.desktop-only {
-    display: block;
-    background-color: #FF5733;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
+@media (max-width: 48rem) {
+    .cta-button.desktop-only {
+        display: none;
+    }
 }
-
+    
+/* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 6rem 2rem;
-    text-align: center;
+    padding: 5rem 1.25rem 2.5rem;
+    background: #000;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-}
-
-.hero .cta-button {
-    background-color: #FF5733;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
     font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 1.25rem;
+    opacity: 0.8;
 }
 
-/* Opportunity Section */
-#opportunity {
-    padding: 5rem 2rem;
-    background-color: #222;
-    text-align: center;
+.cta-button {
+    display: inline-block;
+    background: #FFD700;
+    color: #000;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-#opportunity h2 {
+.cta-button:hover {
+    background: #b89600;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 5rem 1.25rem;
+    max-width: 56.25rem;
+    margin: 0 auto;
+}
+
+h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    color: #fff;
 }
 
-#opportunity p {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-}
-
+/* Why Now Section */
 .industry-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
     margin-top: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .industry-card {
-    background-color: #333;
-    padding: 2rem;
-    border-radius: 8px;
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
 }
 
 .industry-card h3 {
     font-size: 1.5rem;
+    color: #FFD700;
     margin-bottom: 0.5rem;
 }
 
 .industry-card p {
     font-size: 1rem;
-    line-height: 1.6;
+    opacity: 0.9;
 }
 
-/* Why Andersen Section */
-#why-andersen {
-    background-color: #1a1a1a;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-#why-andersen h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
+/* Why Andersen */
 .timeline {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+    z-index: 1;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%; /* Full width for desktop */
+    height: 4px;
+    background: rgba(255, 215, 0, 0.5);
+    z-index: -1;
 }
 
 .timeline-step {
-    background-color: #333;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 200px;
+    background: #111;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
     text-align: center;
+    position: relative;
+    width: 30%; /* Wider boxes on desktop */
+    margin-right: 4rem; /* Increased margin to create more space between boxes on desktop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
 }
 
 .timeline-step h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
 }
 
 .timeline-step p {
     font-size: 1rem;
+    opacity: 0.9;
 }
 
-/* Why We Exist Section */
-#why-we-exist {
-    padding: 5rem 2rem;
-    background-color: #222;
-    text-align: center;
-}
-
-#why-we-exist h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-#why-we-exist p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* The Opportunity Section */
-#the-opportunity {
-    padding: 5rem 2rem;
-    background-color: #333;
-    text-align: center;
-}
-
-#the-opportunity h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.comparison-table {
-    margin-top: 3rem;
-}
-
-.comparison-table table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    font-size: 1.1rem;
-}
-
-.comparison-table th, .comparison-table td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #555;
-}
-
-.comparison-table th {
-    background-color: #444;
-}
-
-.comparison-table td {
-    background-color: #333;
-}
-
-/* Contact Form Section */
-.contact {
-    padding: 5rem 2rem;
-    background-color: #222;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.contact p {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-}
-
-.contact form input,
-.contact form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-}
-
-.contact form button {
-    background-color: #FF5733;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-}
-
-.contact form button:hover {
-    background-color: #e04e1d;
-}
-
-#success-message {
-    display: none;
-    color: green;
-    margin-top: 1rem;
-}
-
-/* Newsletter Signup */
-.newsletter-signup {
-    padding: 5rem 2rem;
-    background-color: #222;
-    text-align: center;
-}
-
-.newsletter-signup h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.newsletter-signup p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.newsletter-signup form input {
-    padding: 1rem;
-    width: 60%;
-    margin-right: 1rem;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-}
-
-.newsletter-signup form button {
-    background-color: #FF5733;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.newsletter-signup form button:hover {
-    background-color: #e04e1d;
-}
-
-/* Footer */
-footer#footer {
-    background-color: #000;
-    padding: 2rem;
-    text-align: center;
-}
-
-footer#footer .logo img {
-    width: 150px;
-}
-
-footer#footer .footer-text {
-    font-size: 1rem;
-    opacity: 0.8;
-    color: #ccc;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .industry-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
     .timeline {
         flex-direction: column;
         align-items: center;
     }
+    
+    .timeline::before {
+        height: 100%; /* Full height line for mobile */
+        width: 4px;
+        left: 50%;
+        top: 0;
+    }
+
+    /* For mobile, shorten the line and increase the space between boxes */
+    .timeline::before {
+        width: 80%; /* Shortened line for mobile */
+        left: 10%; /* Center the line relative to the boxes */
+    }
 
     .timeline-step {
-        width: 80%;
+        width: 80%; /* Keep boxes the same size on mobile */
+        margin-bottom: 3.5rem; /* Increased margin for more space between boxes on mobile */
+        margin-right: 0; /* Remove margin-right for mobile */
     }
+}
 
-    .comparison-table table {
+/* Why We Exist Section */
+#why-we-exist {
+    padding: 0.5rem 1.25rem;
+}
+
+#why-we-exist h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#why-we-exist p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+}
+
+
+/* Comparison Table */
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-table th {
+    background-color: #111;
+    color: #FFD700;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #000;
+    padding: 3.75rem 1.25rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    background: #222;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+    background-color: #333;
+}
+
+.contact button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    background: #FFD700;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: #b89600;
+    transform: scale(1.05);
+}
+
+@media (max-width: 48rem) {
+    .contact form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background-color: #000;
+    padding: 3rem 1.25rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-signup h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.newsletter-signup p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-signup input {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    color: #fff;
+    background: #222;
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-signup input:focus {
+    outline: none;
+    border-color: #FFD700;
+    background-color: #333;
+}
+
+.newsletter-signup button {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    background: #FFD700;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-signup button:hover {
+    background: #b89600;
+    transform: scale(1.05);
+}
+
+@media (max-width: 48rem) {
+    .newsletter-signup input {
         width: 100%;
     }
+}
 
-    .newsletter-signup form input {
-        width: 80%;
-    }
+/* Footer */
+footer {
+    padding: 3.75rem 1.25rem;
+    background: #000;
+    text-align: center;
+}
+
+footer .logo {
+    padding-left: 2.5rem;
+}
+
+footer .logo img {
+    height: 4.5rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    opacity: 0.7;
 }

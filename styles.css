@@ -92,42 +92,6 @@ h2 {
     color: #fff;
 }
 
-/* About Section Styling */
-.about-section {
-  background-color: #1a1a1a; /* Dark background for the section */
-  color: #fff; /* White text for contrast */
-  padding: 80px 0; /* Add padding for spacing */
-  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
-}
-
-.about-section .container {
-  width: 80%;
-  margin: 0 auto; /* Center content */
-  text-align: center; /* Center the text */
-}
-
-.about-section h2 {
-  font-size: 2.5rem; /* Large title */
-  font-weight: 700; /* Bold title */
-  margin-bottom: 20px; /* Space below the title */
-  color: #e6e6e6; /* Slightly lighter color for the heading */
-}
-
-.about-section p {
-  font-size: 1.125rem; /* Slightly larger paragraph text */
-  line-height: 1.6; /* More line spacing for readability */
-  margin-bottom: 20px; /* Space between paragraphs */
-  max-width: 800px; /* Limit paragraph width for better readability */
-  margin-left: auto;
-  margin-right: auto; /* Center paragraphs */
-  color: #ccc; /* Light grey color for the text */
-}
-
-.about-section strong {
-  font-weight: 700; /* Bold text for the company name */
-  color: #e6e6e6; /* Ensure it matches the heading color */
-}
-
 /* Industry Grid (Why Now Section) */
 .industry-grid {
     display: grid;

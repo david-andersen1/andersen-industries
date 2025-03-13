@@ -128,6 +128,80 @@ h2 {
     opacity: 0.9;
 }
 
+/* Why Andersen */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+    z-index: 1;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 50%; /* Shortened line */
+    height: 4px;
+    background: rgba(255, 215, 0, 0.5);
+    z-index: -1;
+}
+
+.timeline-step {
+    background: #111;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    margin-right: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+}
+
+.timeline-step h3 {
+    font-size: 1.3rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-step p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline::before {
+        height: 100%;
+        width: 4px;
+        left: 50%;
+        top: 0;
+    }
+
+    .timeline::before {
+        width: 80%; /* Adjusted width for mobile */
+        left: 10%;
+    }
+
+    .timeline-step {
+        width: 80%;
+        margin-bottom: 3.5rem;
+        margin-right: 0;
+    }
+}
+
 /* Why We Exist Section */
 #why-we-exist {
     padding: 0.5rem 1.25rem;
@@ -162,82 +236,6 @@ h2 {
 .comparison-table th {
     background-color: #111;
     color: #FFD700;
-}
-
-/* Why Andersen */
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin-top: 3rem;
-    z-index: 1;
-    flex-wrap: wrap;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: rgba(255, 215, 0, 0.5);
-    z-index: -1;
-}
-
-.timeline-step {
-    background: #111;
-    color: #fff;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    position: relative;
-    width: 25%;
-    margin-right: 4rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-grow: 0;
-}
-
-.timeline-step:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
-}
-
-.timeline-step h3 {
-    font-size: 1.3rem;
-    color: #FFD700;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-step p {
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .timeline::before {
-        height: 100%;
-        width: 4px;
-        left: 50%;
-        top: 0;
-    }
-
-    .timeline::before {
-        width: 80%;
-        left: 10%;
-    }
-
-    .timeline-step {
-        width: 80%;
-        margin-bottom: 3.5rem;
-        margin-right: 0;
-    }
 }
 
 /* Contact Section */

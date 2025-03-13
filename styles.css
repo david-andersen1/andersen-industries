@@ -170,7 +170,7 @@ h2 {
 .timeline::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 0;
     width: 50%;
     height: 4px;

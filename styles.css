@@ -87,40 +87,6 @@ h2 {
     color: #fff;
 }
 
-/* Industry Grid (Why Now Section) */
-.industry-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1.25rem;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.industry-card {
-    background: #111;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.industry-card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
-}
-
-.industry-card h3 {
-    font-size: 1.5rem;
-    color: #FFD700;
-    margin-bottom: 0.5rem;
-}
-
-.industry-card p {
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
 /* Comparison Cards */
 .comparison-section {
     margin-top: 3rem;
@@ -128,31 +94,33 @@ h2 {
 
 .comparison-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .comparison-factor {
-    width: 100%;
     font-size: 1.3rem;
     font-weight: 700;
     color: #FFD700;
-    text-align: left;
+    text-align: center;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #FFD700;
     margin-bottom: 1rem;
 }
 
+.comparison-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .comparison-card {
-    flex: 1;
     background: #111;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 30%;
 }
 
 .comparison-card.andersen {
@@ -166,12 +134,20 @@ h2 {
     box-shadow: 0 0 0.5rem rgba(255, 215, 0, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .comparison-row {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .comparison-cards {
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-around;
     }
     .comparison-card {
-        min-width: 100%;
+        flex: 1;
+        min-width: 30%;
     }
 }
 

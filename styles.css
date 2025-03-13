@@ -185,8 +185,8 @@ h2 {
     border-radius: 0.5rem;
     text-align: center;
     position: relative;
-    width: 22%;
-    margin-right: 3.5rem; /* Increased margin to create more space between boxes on desktop */
+    width: 25%;
+    margin-right: 4rem; /* Increased margin to create more space between boxes on desktop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

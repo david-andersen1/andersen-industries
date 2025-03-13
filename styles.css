@@ -218,11 +218,12 @@ h2 {
         left: 50%;
         top: 0;
     }
-    
+
+    /* For mobile, increase the space between boxes */
     .timeline-step {
         width: 80%;
-        margin-bottom: 2rem;
-        margin-right: 0; /* Remove the margin-right for mobile */
+        margin-bottom: 3rem; /* Increased margin for more space between boxes on mobile */
+        margin-right: 0; /* Remove margin-right for mobile */
     }
 }
 

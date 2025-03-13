@@ -186,6 +186,7 @@ h2 {
     text-align: center;
     position: relative;
     width: 22%;
+    margin-right: 3rem; /* Increased margin to create more space between boxes on desktop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -221,8 +222,10 @@ h2 {
     .timeline-step {
         width: 80%;
         margin-bottom: 2rem;
+        margin-right: 0; /* Remove the margin-right for mobile */
     }
 }
+
 
 /* Contact Section */
 .contact {

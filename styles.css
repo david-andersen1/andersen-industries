@@ -186,7 +186,7 @@ h2 {
     text-align: center;
     position: relative;
     width: 22%;
-    margin-right: 3rem; /* Increased margin to create more space between boxes on desktop */
+    margin-right: 3.5rem; /* Increased margin to create more space between boxes on desktop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -222,7 +222,7 @@ h2 {
     /* For mobile, increase the space between boxes */
     .timeline-step {
         width: 80%;
-        margin-bottom: 3rem; /* Increased margin for more space between boxes on mobile */
+        margin-bottom: 3.5rem; /* Increased margin for more space between boxes on mobile */
         margin-right: 0; /* Remove margin-right for mobile */
     }
 }

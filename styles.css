@@ -184,7 +184,7 @@ h2 {
     }
     
     .timeline::before {
-        height: 50%; /* Full height line for mobile */
+        height: 100%; /* Full height line for mobile */
         width: 4px;
         left: 50%;
         top: 0;

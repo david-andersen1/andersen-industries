@@ -121,88 +121,57 @@ h2 {
     opacity: 0.9;
 }
 
-/* Comparison Table */
-.comparison-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-}
-
-.comparison-table th, .comparison-table td {
-    border: 1px solid #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-.comparison-table th {
-    background-color: #111;
-    color: #FFD700;
-}
-
-/* Timeline Layout */
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+/* Comparison Cards */
+.comparison-section {
     margin-top: 3rem;
-    z-index: 1;
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
+.comparison-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-factor {
     width: 100%;
-    height: 4px;
-    background: rgba(255, 215, 0, 0.5);
-    z-index: -1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFD700;
+    margin-bottom: 1rem;
 }
 
-.timeline-step {
+.comparison-card {
+    flex: 1;
     background: #111;
-    color: #fff;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
-    position: relative;
-    width: 22%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 30%;
 }
 
-.timeline-step:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+.comparison-card.andersen {
+    background: #FFD700;
+    color: #000;
+    font-weight: 700;
 }
 
-.timeline-step h3 {
-    font-size: 1.3rem;
-    color: #FFD700;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-step p {
-    font-size: 1rem;
-    opacity: 0.9;
+.comparison-card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 0.5rem rgba(255, 215, 0, 0.5);
 }
 
 @media (max-width: 768px) {
-    .timeline {
+    .comparison-row {
         flex-direction: column;
-        align-items: center;
     }
-    
-    .timeline::before {
-        height: 100%;
-        width: 4px;
-        left: 50%;
-        top: 0;
-    }
-    
-    .timeline-step {
-        width: 80%;
-        margin-bottom: 2rem;
+    .comparison-card {
+        min-width: 100%;
     }
 }
 

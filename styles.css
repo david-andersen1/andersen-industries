@@ -57,27 +57,32 @@ header.site-header {
 }
 
 /* Mobile Navigation */
-.mobile-nav {
+#mobile-menu {
     display: none;
+    flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background-color: #333; /* Adjust background color */
     width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+    height: 100vh; /* Fullscreen */
+    padding-top: 3rem;
 }
 
-.mobile-nav a {
-    display: block;
+#mobile-menu.active {
+    display: flex; /* Show the menu when active */
+}
+
+#mobile-menu a {
+    color: #fff; /* White text for the links */
     padding: 1rem;
-    color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Slight divider between items */
 }
 
-.mobile-nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
+#mobile-menu a:hover {
+    background-color: #444; /* Slight highlight on hover */
 }
 
 /* Show mobile menu when active */

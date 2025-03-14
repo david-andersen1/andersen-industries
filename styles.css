@@ -35,6 +35,7 @@ header.site-header {
     top: 0;
     left: 0;
     z-index: 1000;
+    flex-wrap: wrap; /* Ensure wrapping of items */
 }
 
 .site-header .logo img {

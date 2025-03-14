@@ -180,7 +180,7 @@
 <!-- JavaScript -->
 <script>
     document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the form from redirecting
+        event.preventDefault(); // Prevent the form from redirecting
         
         // Send the form data using Fetch API (Formspree will handle the submission)
         const form = event.target;
@@ -191,18 +191,22 @@
             body: formData
         })
         .then(response => {
+            // Debugging - log response to the console
+            console.log(response.status, response.ok, response);
+
             if (response.ok) {
-                // Show success message
+                // If the response is OK, show success message
                 document.getElementById('success-message').style.display = 'block';
                 form.reset(); // Optionally reset the form
             } else {
-                // Handle errors (Optional)
-                alert('Something went wrong, please try again later.');
+                // Handle unsuccessful response (error on Formspree or connection issue)
+                alert('There was an issue with the form submission. Please try again.');
             }
         })
         .catch(error => {
-            // Handle any fetch errors
+            // Handle fetch errors (network errors, etc.)
             alert('There was an error with the submission. Please try again.');
+            console.error(error);
         });
     });
 </script>

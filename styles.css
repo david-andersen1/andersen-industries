@@ -406,6 +406,12 @@ footer {
     text-align: center;
 }
 
+footer .footer-links a {
+    color: #fff;  /* Change link color to white */
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
 footer .logo {
     padding-left: 2.5rem;
 }

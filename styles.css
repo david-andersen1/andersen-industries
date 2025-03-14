@@ -50,7 +50,7 @@ header.site-header {
 
 /* Desktop Only Button */
 .cta-button.desktop-only {
-    margin-left: auto; /* Move the button to the right */
+    margin-right: 2.5rem; /* Move the button to the right */
 }
 
 /* Hide the desktop button on smaller screens */

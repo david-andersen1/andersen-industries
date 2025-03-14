@@ -149,7 +149,7 @@ h2 {
     border-radius: 0.5rem;
     text-align: center;
     position: relative;
-    width: 30%; /* Keep boxes wide on desktop */
+    width: 25%; /* Keep boxes wide on desktop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

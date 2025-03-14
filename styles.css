@@ -23,7 +23,7 @@ header.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: 0.5rem 2.5rem;
     background: #000;
     position: relative;
     width: 100%;
@@ -32,24 +32,66 @@ header.site-header {
     z-index: 1000;
 }
 
-.site-header .logo {
-    padding-left: 2.5rem;
-}
-
 .site-header .logo img {
     height: 4.5rem;
 }
 
+/* Desktop Only Button */
 .cta-button.desktop-only {
     margin-right: 2.5rem;
 }
 
+/* Hide the desktop button on smaller screens */
 @media (max-width: 48rem) {
     .cta-button.desktop-only {
         display: none;
     }
 }
-    
+
+/* Mobile Menu */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    padding: 0.5rem;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Show mobile menu when active */
+.mobile-nav.active {
+    display: block;
+}
+
+/* Show menu icon on mobile */
+@media (max-width: 48rem) {
+    .menu-icon {
+        display: block;
+    }
+}
+  
 /* Hero Section */
 .hero {
     padding: 5rem 1.25rem 2.5rem;

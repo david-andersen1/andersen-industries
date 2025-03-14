@@ -92,11 +92,12 @@ header.site-header {
     padding: 1rem;
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid #444; /* Slight divider between items */
+    border-bottom: 1px solid #111; /* Slight divider between items */
+    z-index: 9999;
 }
 
 #mobile-menu a:hover {
-    background-color: #444; /* Slight highlight on hover */
+    background-color: #111; /* Slight highlight on hover */
 }
 
 /* Show mobile menu when active */
@@ -221,6 +222,7 @@ h2 {
 .timeline-step:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+    z-index: 2;
 }
 
 .timeline-step h3 {

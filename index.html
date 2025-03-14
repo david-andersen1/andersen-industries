@@ -170,43 +170,51 @@
     <h2>Stay Informed</h2>
     <p>Subscribe to receive the latest updates, news, and insights from Andersen Industries directly in your inbox.</p>
     <form id="newsletter-form" action="https://formspree.io/f/mjkyvngy" method="POST">
-        <input type="email" name="email" id="email" placeholder="Your Email" required />
+        <input type="email" name="email" placeholder="Your Email" required />
         <button type="submit">Subscribe</button>
     </form>
-    <!-- Success Message (Hidden initially) -->
-    <p id="success-message" style="display:none; color: white;">Thank you for subscribing! Check your inbox for updates.</p>
+    <p id="success-message" style="display:none;">Thank you for subscribing! Check your inbox for updates.</p>
+    <p id="error-message" style="display:none;">There was an error with the submission. Please try again.</p>
 </section>
 
 <!-- JavaScript -->
 <script>
     document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from redirecting
-        
-        // Send the form data using Fetch API (Formspree will handle the submission)
+        event.preventDefault(); // Prevent form from redirecting
+
         const form = event.target;
         const formData = new FormData(form);
-        
+
+        // Hide previous success/error messages
+        document.getElementById('success-message').style.display = 'none';
+        document.getElementById('error-message').style.display = 'none';
+
+        // Disable the submit button to prevent multiple submissions
+        form.querySelector('button').disabled = true;
+
+        // Use fetch to submit the form data to Formspree
         fetch(form.action, {
             method: 'POST',
             body: formData
         })
         .then(response => {
-            // Debugging - log response to the console
-            console.log(response.status, response.ok, response);
-
             if (response.ok) {
-                // If the response is OK, show success message
+                // Display success message
                 document.getElementById('success-message').style.display = 'block';
                 form.reset(); // Optionally reset the form
             } else {
-                // Handle unsuccessful response (error on Formspree or connection issue)
-                alert('There was an issue with the form submission. Please try again.');
+                // Display error message if the response is not ok
+                document.getElementById('error-message').style.display = 'block';
             }
         })
         .catch(error => {
-            // Handle fetch errors (network errors, etc.)
-            alert('There was an error with the submission. Please try again.');
+            // If there's an error, display the error message
+            document.getElementById('error-message').style.display = 'block';
             console.error(error);
+        })
+        .finally(() => {
+            // Re-enable the submit button after handling the response
+            form.querySelector('button').disabled = false;
         });
     });
 </script>

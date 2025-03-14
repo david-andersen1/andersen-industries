@@ -135,7 +135,7 @@ h2 {
 /* Why Andersen */
 .timeline {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Evenly distribute boxes horizontally */
     align-items: center;
     position: relative;
     margin-top: 3rem;
@@ -149,8 +149,7 @@ h2 {
     border-radius: 0.5rem;
     text-align: center;
     position: relative;
-    width: 30%; /* Wider boxes on desktop */
-    margin-right: 2rem; /* Increased margin to create more space between boxes on desktop */
+    width: 30%; /* Keep boxes wide on desktop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -177,9 +176,8 @@ h2 {
     }
 
     .timeline-step {
-        width: 80%; /* Keep boxes the same size on mobile */
-        margin-bottom: 2rem; /* Increased margin for more space between boxes on mobile */
-        margin-right: 0; /* Remove margin-right for mobile */
+        width: 80%;
+        margin-bottom: 2rem; /* Keep even spacing between boxes */
     }
 }
 

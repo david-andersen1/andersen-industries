@@ -10,7 +10,19 @@
 <body>
     <header class="site-header">
         <a href="#" class="logo"><img src="AI-logo.png" alt="Andersen Industries Logo"></a>
+        
+        <!-- Desktop Button -->
         <a href="#contact" class="cta-button desktop-only">Get in Touch</a>
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon mobile-only" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="mobile-nav">
+            <a href="#contact">Get in Touch</a>
+        </nav>
     </header>
 
     <header class="hero">
@@ -18,6 +30,13 @@
         <p>Andersen Industries is launching and scaling the next generation of industry-defining companies.</p>
         <a href="#contact" class="cta-button">Request Investor Access</a>
     </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("active");
+        }
+    </script>
+</body>
 
     <!-- Why Now Section -->
     <section id="opportunity" class="opportunity">

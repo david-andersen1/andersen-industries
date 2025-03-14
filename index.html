@@ -173,8 +173,8 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <button type="submit">Subscribe</button>
     </form>
-    <p id="success-message" style="display:none;">Thank you for subscribing! Check your inbox for updates.</p>
-    <p id="error-message" style="display:none;">There was an error with the submission. Please try again.</p>
+    <p id="success-message" style="display: none; color: green;">Thank you for subscribing!</p>
+    <p id="error-message" style="display: none; color: red;">Something went wrong. Please try again.</p>
 </section>
 
 <!-- JavaScript -->
@@ -195,17 +195,17 @@
     .then(response => response.json()) // Parse the JSON response
     .then(data => {
         if (data.ok) {
-            document.getElementById("success-message").style.display = "block";
-            document.getElementById("error-message").style.display = "none";
+            document.getElementById("success-message").style.display = "block"; // Show success message
+            document.getElementById("error-message").style.display = "none"; // Hide error message
             form.reset();  // Clear the form
         } else {
-            document.getElementById("error-message").style.display = "block";
-            document.getElementById("success-message").style.display = "none";
+            document.getElementById("error-message").style.display = "block"; // Show error message
+            document.getElementById("success-message").style.display = "none"; // Hide success message
         }
     })
     .catch(error => {
-        document.getElementById("error-message").style.display = "block";
-        document.getElementById("success-message").style.display = "none";
+        document.getElementById("error-message").style.display = "block"; // Show error message
+        document.getElementById("success-message").style.display = "none"; // Hide success message
     });
 });
 </script>

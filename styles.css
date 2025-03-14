@@ -456,7 +456,7 @@ footer .logo img {
 /* Decrease link text size on mobile */
 @media (max-width: 48rem) {
     footer .footer-links a {
-        font-size: 0.8rem; /* Slightly smaller text */
+        font-size: 0.75rem; /* Slightly smaller text */
     }
 }
 

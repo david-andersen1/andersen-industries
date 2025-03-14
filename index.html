@@ -185,25 +185,25 @@
     var form = event.target;
     var formData = new FormData(form);
 
-    // Use the Formspree API to send the form data
     fetch("https://formspree.io/f/mjkyvngy", {
         method: "POST",
-        body: formData
+        body: formData,
+        headers: {
+            "Accept": "application/json"  // Prevents redirect by requesting JSON response
+        }
     })
-    .then(response => {
-        if (response.ok) {
-            // If the submission was successful, show the success message
+    .then(response => response.json()) // Parse the JSON response
+    .then(data => {
+        if (data.ok) {
             document.getElementById("success-message").style.display = "block";
             document.getElementById("error-message").style.display = "none";
             form.reset();  // Clear the form
         } else {
-            // If there was an error, show the error message
             document.getElementById("error-message").style.display = "block";
             document.getElementById("success-message").style.display = "none";
         }
     })
     .catch(error => {
-        // Handle any errors that occur during the fetch request
         document.getElementById("error-message").style.display = "block";
         document.getElementById("success-message").style.display = "none";
     });

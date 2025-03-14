@@ -142,17 +142,6 @@ h2 {
     z-index: 1;
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%; /* Full width for desktop */
-    height: 4px;
-    background: rgba(255, 215, 0, 0.5);
-    z-index: -1;
-}
-
 .timeline-step {
     background: #111;
     color: #fff;

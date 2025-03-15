@@ -74,15 +74,16 @@ header.site-header {
 #mobile-menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%; /* Position the menu directly below the header */
-    left: 0; /* Align the menu to the left */
-    background-color: #111; /* Adjust background color */
+    position: fixed; /* Change from absolute to fixed */
+    top: 0; /* Position it at the very top */
+    left: 0;
     width: 100%;
-    max-height: 80vh; /* Limit height to 80% of the viewport */
-    overflow-y: auto; /* Allow scrolling if the menu exceeds the height */
+    height: 100vh; /* Full screen menu */
+    background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent background */
     z-index: 9999;
-    padding-top: 1rem; /* Add some space at the top for better visual */
+    padding-top: 4rem; /* Add some space at the top */
+    justify-content: center;
+    align-items: center;
 }
 
 #mobile-menu.active {
@@ -90,20 +91,28 @@ header.site-header {
 }
 
 #mobile-menu a {
-    color: #fff; /* White text for the links */
-    padding: 1rem;
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 1.5rem; /* Make links larger */
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid #111; /* Slight divider between items */
+    border-bottom: 1px solid #333;
+    width: 100%;
 }
 
 #mobile-menu a:hover {
-    background-color: #333; /* Slight highlight on hover */
+    background-color: #222;
 }
 
-/* Show mobile menu when active */
-.mobile-nav.active {
-    display: block;
+/* Adjust menu icon positioning */
+.menu-icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    z-index: 10000; /* Ensure it stays on top */
 }
 
 /* Show menu icon on mobile */
@@ -112,26 +121,9 @@ header.site-header {
         display: block;
     }
 
-    /* Adjust logo and menu icon for mobile */
-    header.site-header {
-        padding: 0.5rem 1rem; /* Reduce padding for smaller screens */
-    }
-
-    /* Change the menu icon to X when the menu is active */
-    .menu-icon.active {
-        content: "×"; /* Change the hamburger to an X */
-    }
-
-    /* Using actual 'X' for closing, not content */
-    .menu-icon.active {
+    .menu-icon.active::before {
+        content: "×"; /* Change to X when menu is open */
         font-size: 3rem;
-        display: block;
-    }
-
-    .menu-icon:not(.active) {
-        display: block;
-        font-size: 3rem;
-        content: "☰"; /* Use hamburger for inactive state */
     }
 }
   

@@ -59,28 +59,28 @@ header.site-header {
     .cta-button.desktop-only {
         display: none;
     }
-}
 
-/* Mobile Menu Icon */
-.menu-icon {
-    font-size: 3rem;
-    cursor: pointer;
-    display: block;
-    padding: 0.5rem;
-    position: absolute;
-    right: 2rem; /* Move it closer to the right edge */
-    top: 1rem;
-    z-index: 10000;
-    color: white;
-}
-
-/* Ensure it stays properly positioned on mobile */
-@media (max-width: 48rem) {
+    /* Mobile Menu Icon */
     .menu-icon {
-        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        display: block;  /* Only display on mobile */
+        padding: 0.5rem;
         position: absolute;
-        right: 1rem;  /* Keep it from going off-screen */
-        top: 1rem;
+        right: 2rem; /* Align to the right side */
+        top: 1rem; /* Space from top */
+        z-index: 10000;
+        color: white;
+    }
+
+    /* Ensure the menu icon stays within the screen on mobile */
+    .site-header {
+        justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
+    }
+
+    .site-header .logo {
+        justify-content: flex-start;
+        flex-grow: 0;  /* Don't take up extra space */
     }
 }
 

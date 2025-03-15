@@ -64,19 +64,20 @@ header.site-header {
 .menu-icon {
     font-size: 3rem;
     cursor: pointer;
-    display: block; /* Ensure visibility */
+    display: block;
     padding: 0.5rem;
     position: absolute;
-    right: 1.5rem;
+    right: 0.5rem; /* Move it closer to the screen */
     top: 1rem;
     z-index: 10000;
-    color: white; /* Ensure visibility */
+    color: white;
 }
 
-/* Ensure the menu icon is always visible on mobile */
+/* Ensure it stays properly positioned on mobile */
 @media (max-width: 48rem) {
     .menu-icon {
         display: block;
+        right: 1rem; /* Adjust for smaller screens */
     }
 }
 

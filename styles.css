@@ -60,14 +60,15 @@ header.site-header {
         display: none;
     }
 
-    /* Mobile Menu Icon */
+ /* Mobile Menu Icon */
     .menu-icon {
         font-size: 3rem;
         cursor: pointer;
         display: block;  /* Only display on mobile */
         padding: 0.5rem;
         position: absolute;
-        top: 0.5rem; /* Space from top */
+        right: 0.25rem; /* Align to the right side */
+        top: 0.25rem; /* Space from top */
         z-index: 10000;
         color: white;
     }

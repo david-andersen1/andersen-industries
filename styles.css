@@ -30,7 +30,7 @@ header.site-header {
     align-items: center;
     padding: 0.5rem 2rem;
     background: #000;
-    position: relative;
+    position: relative;  /* No sticky position */
     width: 100%;
     top: 0;
     left: 0;
@@ -66,19 +66,17 @@ header.site-header {
         margin-left: -1.5rem; /* Moves logo slightly left */
     }
 
-/* Mobile Menu Icon */
-.menu-icon {
-    font-size: 3rem; /* Increase icon size */
-    cursor: pointer;
-    display: block;
-    padding: 0.5rem;
-    position: fixed;
-    top: 0.25rem; /* Space from the top */
-    right: 1rem; /* Space from the right */
-    z-index: 99999; /* Ensure it's above the header */
-    color: white;
-}
-    /* Ensure the menu icon stays within the screen on mobile */
+    /* Mobile Menu Icon inside the header */
+    .menu-icon {
+        font-size: 3rem; /* Increase icon size */
+        cursor: pointer;
+        padding: 0.5rem;
+        display: block;
+        z-index: 99999; /* Ensure it's above other elements */
+        color: white;
+    }
+
+    /* Adjust header layout for mobile */
     .site-header {
         justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
     }

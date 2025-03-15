@@ -60,21 +60,21 @@ header.site-header {
         display: none;
     }
 
- /* Mobile Menu Icon */
+/* Mobile Menu Icon */
     .menu-icon {
         font-size: 3rem;
         cursor: pointer;
         display: block;
         padding: 0.5rem;
-        position: absolute;
-        right: 1rem; /* Move it more into the screen */
-        top: 0.75rem; /* Adjust vertical position */
+        position: relative;
+        margin-left: auto; /* Push it to the right */
+        top: 0;
+        right: 0;
         z-index: 10009;
         color: white;
     }
 
-
-    /* Ensure the menu icon stays within the screen on mobile */
+   /* Ensure the menu icon stays within the screen on mobile */
     .site-header {
         justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
     }

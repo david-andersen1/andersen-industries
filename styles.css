@@ -82,6 +82,7 @@ header.site-header {
     max-height: 80vh; /* Limit height to 80% of the viewport */
     overflow-y: auto; /* Allow scrolling if the menu exceeds the height */
     z-index: 9999;
+    padding-top: 1rem; /* Add some space at the top for better visual */
 }
 
 #mobile-menu.active {
@@ -133,7 +134,6 @@ header.site-header {
         content: "☰"; /* Use hamburger for inactive state */
     }
 }
-
   
 /* Hero Section */
 .hero {

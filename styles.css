@@ -67,9 +67,9 @@ header.site-header {
         display: block;  /* Only display on mobile */
         padding: 0.5rem;
         position: absolute;
-        right: 0.25rem; /* Align to the right side */
-        top: 0.25rem; /* Space from top */
-        z-index: 10000;
+        right: 0.25rem;
+        top: 0.25rem;
+        z-index: 10009;
         color: white;
     }
 

@@ -63,12 +63,14 @@ header.site-header {
 
     /* Move logo & menu icon slightly left */
     .site-header .logo {
-        margin-left: -0.5rem; /* Moves logo slightly left */
+        margin-left: -1rem; /* Moves logo slightly left */
     }
 
     .menu-icon {
         margin-right: auto; /* Pushes the menu icon slightly left */
         margin-left: -0.5rem; /* Moves it further left */
+        margin-top: -0.25rem; /* Moves it up */
+
     }
 
     /* Mobile Menu Icon */

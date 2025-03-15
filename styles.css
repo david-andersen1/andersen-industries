@@ -114,9 +114,21 @@ header.site-header {
         padding: 0.5rem 1rem; /* Reduce padding for smaller screens */
     }
 
-    /* Change menu icon to X when menu is active */
+    /* Change the menu icon to X when the menu is active */
     .menu-icon.active {
         content: "×"; /* Change the hamburger to an X */
+    }
+
+    /* Using actual 'X' for closing, not content */
+    .menu-icon.active {
+        font-size: 3rem;
+        display: block;
+    }
+
+    .menu-icon:not(.active) {
+        display: block;
+        font-size: 3rem;
+        content: "☰"; /* Use hamburger for inactive state */
     }
 }
   

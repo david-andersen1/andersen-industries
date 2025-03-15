@@ -113,20 +113,6 @@ header.site-header {
 #mobile-menu a:hover {
     background-color: #222;
 }
-
-function toggleMenu() {
-    let menu = document.getElementById("mobile-menu");
-    let icon = document.querySelector(".menu-icon");
-
-    menu.classList.toggle("active");
-
-    // Toggle between ☰ and × icons
-    if (menu.classList.contains("active")) {
-        icon.textContent = "×"; // Show 'X' when menu is open
-    } else {
-        icon.textContent = "☰"; // Show hamburger when menu is closed
-    }
-}
   
 /* Hero Section */
 .hero {
@@ -471,4 +457,3 @@ footer .logo img {
         font-size: 0.75rem; /* Slightly smaller text */
     }
 }
-

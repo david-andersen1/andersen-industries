@@ -42,6 +42,7 @@ header.site-header {
 .site-header .logo {
     display: flex;
     justify-content: flex-start;
+    flex-grow: 1;  /* Ensures logo stays on the left */
 }
 
 .site-header .logo img {
@@ -67,7 +68,7 @@ header.site-header {
     display: block;
     padding: 0.5rem;
     position: absolute;
-    right: 0.5rem; /* Move it closer to the screen */
+    right: 2rem; /* Move it closer to the right edge */
     top: 1rem;
     z-index: 10000;
     color: white;
@@ -77,6 +78,9 @@ header.site-header {
 @media (max-width: 48rem) {
     .menu-icon {
         display: block;
+        position: absolute;
+        right: 1rem;  /* Keep it from going off-screen */
+        top: 1rem;
     }
 }
 

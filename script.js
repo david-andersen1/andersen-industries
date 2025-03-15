@@ -9,6 +9,18 @@ function toggleMenu() {
     icon.textContent = menu.classList.contains("active") ? "×" : "☰";
 }
 
+// Close the mobile menu when a menu item is clicked
+function closeMenu() {
+    let menu = document.getElementById("mobile-menu");
+    let icon = document.querySelector(".menu-icon");
+
+    // Close the menu
+    menu.classList.remove("active");
+
+    // Reset the icon to ☰
+    icon.textContent = "☰";
+}
+
 // Ensure DOM is fully loaded before executing scripts
 document.addEventListener("DOMContentLoaded", function() {
     

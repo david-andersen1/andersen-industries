@@ -66,15 +66,18 @@ header.site-header {
         margin-left: -1.5rem; /* Moves logo slightly left */
     }
 
-    .menu-icon {
-        margin-right: auto; /* Pushes the menu icon slightly left */
-        margin-top: -0.25rem; /* Moves it up */
-        position: fixed; /* Fixes position of the icon relative to the screen */
-        top: 1rem; /* Adds some space from the top */
-        right: 1rem; /* Moves the icon towards the right */
-        z-index: 99999; /* Ensures the icon stays on top */
-    }
-
+/* Mobile Menu Icon */
+.menu-icon {
+    font-size: 4rem; /* Increase icon size */
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem;
+    position: fixed;
+    top: 1rem; /* Space from the top */
+    right: 1rem; /* Space from the right */
+    z-index: 99999; /* Ensure it's above the header */
+    color: white;
+}
     /* Ensure the menu icon stays within the screen on mobile */
     .site-header {
         justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */

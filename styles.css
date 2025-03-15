@@ -98,7 +98,7 @@ header.site-header {
 
 /* Mobile Navigation */
 #mobile-menu {
-    display: none;
+    display: none; /* Initially hidden */
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -110,6 +110,11 @@ header.site-header {
     padding-top: 4rem;
     justify-content: center;
     align-items: center;
+}
+
+/* Show mobile menu when it's active */
+#mobile-menu.active {
+    display: flex; /* Makes the menu visible when active */
 }
 
 /* When mobile menu is active, adjust the z-index of the menu icon */

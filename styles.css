@@ -68,7 +68,6 @@ header.site-header {
 
     .menu-icon {
         margin-right: auto; /* Pushes the menu icon slightly left */
-        margin-left: -0.5rem; /* Moves it further left */
         margin-top: -0.25rem; /* Moves it up */
     }
 

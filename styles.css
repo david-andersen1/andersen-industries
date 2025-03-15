@@ -67,7 +67,7 @@ header.site-header {
     display: block;
     padding: 0.5rem;
     position: absolute;
-    right: 5rem; /* Move it closer to the screen */
+    right: 0.5rem; /* Move it closer to the screen */
     top: 1rem;
     z-index: 10000;
     color: white;

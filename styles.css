@@ -64,14 +64,15 @@ header.site-header {
     .menu-icon {
         font-size: 3rem;
         cursor: pointer;
-        display: block;  /* Only display on mobile */
+        display: block;
         padding: 0.5rem;
         position: absolute;
-        right: 0.25rem;
-        top: 0.25rem;
+        right: 1rem; /* Move it more into the screen */
+        top: 0.75rem; /* Adjust vertical position */
         z-index: 10009;
         color: white;
     }
+
 
     /* Ensure the menu icon stays within the screen on mobile */
     .site-header {

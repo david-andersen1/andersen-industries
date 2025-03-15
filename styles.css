@@ -54,27 +54,37 @@ header.site-header {
     margin-right: 3.5rem;
 }
 
-/* Hide the desktop button on smaller screens */
+/* Mobile Styles */
 @media (max-width: 48rem) {
+    /* Hide the desktop button on smaller screens */
     .cta-button.desktop-only {
         display: none;
     }
 
-/* Mobile Menu Icon */
+    /* Move logo & menu icon slightly left */
+    .site-header .logo {
+        margin-left: -0.5rem; /* Moves logo slightly left */
+    }
+
+    .menu-icon {
+        margin-right: auto; /* Pushes the menu icon slightly left */
+        margin-left: -0.5rem; /* Moves it further left */
+    }
+
+    /* Mobile Menu Icon */
     .menu-icon {
         font-size: 3rem;
         cursor: pointer;
         display: block;
         padding: 0.5rem;
         position: relative;
-        margin-left: auto; /* Push it to the right */
         top: 0;
         right: 0;
         z-index: 10009;
         color: white;
     }
 
-   /* Ensure the menu icon stays within the screen on mobile */
+    /* Ensure the menu icon stays within the screen on mobile */
     .site-header {
         justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
     }

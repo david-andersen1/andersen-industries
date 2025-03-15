@@ -69,6 +69,10 @@ header.site-header {
     .menu-icon {
         margin-right: auto; /* Pushes the menu icon slightly left */
         margin-top: -0.25rem; /* Moves it up */
+        position: fixed; /* Fixes position of the icon relative to the screen */
+        top: 1rem; /* Adds some space from the top */
+        right: 1rem; /* Moves the icon towards the right */
+        z-index: 99999; /* Ensures the icon stays on top */
     }
 
     /* Ensure the menu icon stays within the screen on mobile */
@@ -80,19 +84,6 @@ header.site-header {
         justify-content: flex-start;
         flex-grow: 0;  /* Don't take up extra space */
     }
-}
-
-/* Mobile Menu Icon */
-.menu-icon {
-    font-size: 3rem;
-    cursor: pointer;
-    display: block;
-    padding: 0.5rem;
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 99999; /* Ensure it's above the header */
-    color: white;
 }
 
 /* Mobile Navigation */
@@ -114,11 +105,6 @@ header.site-header {
 /* Show mobile menu when it's active */
 #mobile-menu.active {
     display: flex; /* Makes the menu visible when active */
-}
-
-/* When mobile menu is active, adjust the z-index of the menu icon */
-#mobile-menu.active + .menu-icon {
-    z-index: 999999; /* Ensure menu icon is on top when menu is open */
 }
 
 /* Mobile Menu Links */

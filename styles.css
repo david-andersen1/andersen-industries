@@ -61,15 +61,16 @@ header.site-header {
         display: none;
     }
 
-    /* Move logo & menu icon slightly left */
+    /* Move the logo slightly left (optional, if needed) */
     .site-header .logo {
-        margin-left: -1.5rem; /* Moves logo slightly left */
+        margin-left: 0;  /* Remove negative margin for the logo */
     }
 
     /* Mobile Menu Icon inside the header */
     .menu-icon {
         font-size: 3rem; /* Increase icon size */
-        margin-left: -3rem; /* Moves icon slightly left */
+        margin-left: 0; /* Remove the negative margin */
+        margin-right: 1rem; /* Add a little spacing on the right side */
         cursor: pointer;
         padding: 0.5rem;
         display: block;
@@ -80,10 +81,11 @@ header.site-header {
     /* Adjust header layout for mobile */
     .site-header {
         justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
+        padding: 0.5rem 1rem;  /* Adjust padding to prevent overflow */
     }
 
+    /* Ensure the logo stays left and the menu icon stays right */
     .site-header .logo {
-        justify-content: flex-start;
         flex-grow: 0;  /* Don't take up extra space */
     }
 }

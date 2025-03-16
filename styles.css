@@ -77,7 +77,7 @@ header.site-header {
     .menu-icon {
         font-size: 3rem; /* Icon size */
         margin-right: 2.5rem; /* Add a little spacing on the right side */
-        margin-top: -0.5rem; /* Add a little spacing on the right side */
+        margin-top: -0.333rem; /* Less spacing on the top side */
         cursor: pointer;
         padding: 0.5rem;
         display: block;
@@ -473,6 +473,6 @@ footer .logo img {
 /* Decrease link text size on mobile */
 @media (max-width: 48rem) {
     footer .footer-links a {
-        font-size: 0.725rem; /* Slightly smaller text */
+        font-size: 0.7rem; /* Slightly smaller text */
     }
 }

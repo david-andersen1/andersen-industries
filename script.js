@@ -26,7 +26,7 @@ function closeMenu() {
 
 // Ensure DOM is fully loaded before executing scripts
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     // Dynamically set the current year in the footer
     let yearElement = document.getElementById("year");
     if (yearElement) {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Ensure scrolling to the correct section if navigating from another page
+    // Ensure smooth scrolling to the correct section if navigating from another page
     if (window.location.hash) {
         const target = document.querySelector(window.location.hash);
         if (target) {
@@ -112,4 +112,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Smooth scroll for all anchor links on the page (even on the homepage)
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
 });

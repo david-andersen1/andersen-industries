@@ -61,15 +61,15 @@ header.site-header {
         display: none;
     }
 
-    /* Move the logo slightly left (optional, if needed) */
+    /* Move the logo slightly left */
     .site-header .logo {
-        margin-left: 0;  /* Remove negative margin for the logo */
+        margin-left: -0.5rem;  /* Moves logo slightly left */
     }
 
     /* Mobile Menu Icon inside the header */
     .menu-icon {
         font-size: 3rem; /* Increase icon size */
-        margin-left: 0; /* Remove the negative margin */
+        margin-left: -0.5rem; /* Moves icon slightly left */
         margin-right: 1rem; /* Add a little spacing on the right side */
         cursor: pointer;
         padding: 0.5rem;

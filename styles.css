@@ -5,13 +5,14 @@ html {
 
 /* Disable scrolling when menu is active */
 .no-scroll {
-    overflow: hidden;
-    height: 100vh; /* Prevents scrolling on mobile */
+    overflow: hidden; /* Prevents scrolling */
 }
 
+/* Body and HTML reset to ensure proper behavior */
 html, body {
     overflow-x: hidden;
     width: 100%;
+    height: 100%; /* Make sure the body takes up full height */
 }
 
 body {
@@ -95,25 +96,24 @@ header.site-header {
     }
 }
 
-/* Mobile Navigation */
+/* Adjustments for mobile menu */
 #mobile-menu {
     display: none; /* Initially hidden */
     flex-direction: column;
     position: fixed;
-    top: 4rem; /* Position below the header (adjust if necessary) */
+    top: 4rem; /* Position below the header */
     left: 0;
     width: 100%;
-    height: calc(100vh - 4rem); /* Ensure the menu takes up the remaining space after the header */
+    height: calc(100vh - 4rem); /* Ensure it takes up the remaining space */
     background-color: rgba(0, 0, 0, 0.95);
-    z-index: 999998; /* Slightly below the menu icon */
-    padding-top: 1rem; /* Padding for better spacing */
-    justify-content: flex-start; /* Start content from the top */
+    z-index: 999998;
+    padding-top: 1rem;
+    justify-content: flex-start;
     align-items: center;
 }
 
-/* Show mobile menu when it's active */
 #mobile-menu.active {
-    display: flex; /* Makes the menu visible when active */
+    display: flex; /* Show menu when active */
 }
 
 /* Mobile Menu Links */

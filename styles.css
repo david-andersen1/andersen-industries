@@ -70,13 +70,14 @@ header.site-header {
 
     /* Move the logo slightly left */
     .site-header .logo {
-        margin-left: -2rem;  /* Moves logo slightly left */
+        margin-left: -2.5rem;  /* Moves logo slightly left */
     }
 
     /* Mobile Menu Icon inside the header */
     .menu-icon {
-        font-size: 3rem; /* Increase icon size */
-        margin-right: 2rem; /* Add a little spacing on the right side */
+        font-size: 2.5rem; /* Icon size */
+        margin-right: 2.5rem; /* Add a little spacing on the right side */
+        margin-top: -1rem; /* Add a little spacing on the right side */
         cursor: pointer;
         padding: 0.5rem;
         display: block;

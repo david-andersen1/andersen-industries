@@ -98,4 +98,15 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    // Ensure scrolling to the correct section if navigating from another page
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: "smooth" });
+            }, 100); // Small delay to ensure page is loaded
+        }
+    }
+
 });

@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andersen Industries, Inc.</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="andersen-fav.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/andersen-industries-favicon.ico">
 </head>
 <body>
 <header class="site-header">
-    <a href="/" class="logo"><img src="AI-logo.png" alt="Andersen Industries Logo"></a>
+    <a href="/" class="logo"><img src="/andersen-industries-logo.png" alt="Andersen Industries Logo"></a>
 
     <!-- Desktop Button -->
-    <a href="https://andersen-inc.com/#contact" class="cta-button desktop-only">Get in Touch</a>
+    <a href="#contact" class="cta-button desktop-only">Get in Touch</a>
 
     <!-- Mobile Menu Icon -->
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
 </header>
 
 <div id="mobile-menu" class="mobile-nav">
-    <a href="https://andersen-inc.com/#why-now" onclick="closeMenu()">Why Now</a>
-    <a href="https://andersen-inc.com/#why-andersen" onclick="closeMenu()">Why Us</a>
-    <a href="https://andersen-inc.com/#why-we-exist" onclick="closeMenu()">Why We Exist</a>
-    <a href="https://andersen-inc.com/#the-opportunity" onclick="closeMenu()">The Opportunity</a>
-    <a href="https://andersen-inc.com/#contact" onclick="closeMenu()">Contact</a>
+    <a href="#why-now" onclick="closeMenu()">Why Now</a>
+    <a href="#why-andersen" onclick="closeMenu()">Why Us</a>
+    <a href="#why-we-exist" onclick="closeMenu()">Why We Exist</a>
+    <a href="#the-opportunity" onclick="closeMenu()">The Opportunity</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
-
+    
 <div class="error-page">
     <h1>404! Page not found.</h1>
     <p>It seems like the page you are looking for doesn't exist.</p>

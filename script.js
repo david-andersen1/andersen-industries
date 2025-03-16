@@ -2,8 +2,10 @@
 function toggleMenu() {
     let menu = document.getElementById("mobile-menu");
     let icon = document.querySelector(".menu-icon");
+    let body = document.body; // Get the body element
 
     menu.classList.toggle("active");
+    body.classList.toggle("no-scroll"); // Disable scrolling when menu is active
 
     // Toggle between ☰ and × icons
     icon.textContent = menu.classList.contains("active") ? "×" : "☰";
@@ -13,9 +15,10 @@ function toggleMenu() {
 function closeMenu() {
     let menu = document.getElementById("mobile-menu");
     let icon = document.querySelector(".menu-icon");
+    let body = document.body; // Get the body element
 
-    // Close the menu
     menu.classList.remove("active");
+    body.classList.remove("no-scroll"); // Re-enable scrolling
 
     // Reset the icon to ☰
     icon.textContent = "☰";
